@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+{% extends "customBootstrapTemplate.html" %}
+
+{% block title %}Update a book{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Get an author from the database</h1>
+      <hr>
+      <form action="/getauthor/create" method="GET">
+      <div class="mb-3">
+        <div class="form-group">
+          <label>ID</label>
+          <input type="text" class="form-control" id="id" name="id" placeholder="The author's ID">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit update</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

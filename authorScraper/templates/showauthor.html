@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+{% extends "customBootstrapTemplate.html" %}
+
+{% block title %}Your author was found{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+
+      <h1>Author was found in Mongo</h1>
+      <hr>
+      <p><strong>Name {{ author["name"] }}</strong></p>
+      <p><strong>Author URL {{ author["author_url"] }}</strong></p>
+      <p><strong>Rating {{ author["rating"] }}</strong></p>
+      <p><strong>Rating count {{ author["rating_count"] }}</strong></p>
+      <p><strong>Review count {{ author["review_count"] }}</strong></p>
+      <p><strong>Image URL {{ author["image_url"] }}</strong></p>
+
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}

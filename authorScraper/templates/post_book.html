@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+{% extends "customBootstrapTemplate.html" %}
+
+{% block title %}Add a new book{% endblock %}
+
+{% block main %}
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Add a book to the database</h1>
+      <hr>
+      <form action="/postabook/create" method="POST">
+      <div class="mb-3">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" id="title" name="title" placeholder="The book's title">
+        </div>
+
+	<div class="form-group">
+          <label>Book URL</label>
+          <input type="text" class="form-control" id="book_url" name="book_url" placeholder="The book's URL">
+        </div>
+	
+	<div class="form-group">
+          <label>Author URL</label>
+          <input type="text" class="form-control" id="author_url" name="author_url" placeholder="The author">
+        </div>
+
+	<div class="form-group">
+          <label>Author</label>
+          <input type="text" class="form-control" id="author" name="author" placeholder="The author">
+        </div>
+
+	<div class="form-group">
+          <label>Rating</label>
+          <input type="text" class="form-control" id="rating" name="rating" placeholder="The rating">
+        </div>
+	
+	<div class="form-group">
+          <label>Rating Count</label>
+          <input type="text" class="form-control" id="rating_count" name="rating_count" placeholder="The number of ratings">
+        </div>
+	
+	<div class="form-group">
+          <label>Review Count</label>
+          <input type="text" class="form-control" id="review_count" name="review_count" placeholder="The number of reviews">
+        </div>
+
+	<div class="form-group">
+          <label>Image URL</label>
+          <input type="text" class="form-control" id="image_url" name="image_url" placeholder="The image's URL">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit book</button>
+      </form>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
